@@ -30,7 +30,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single']
+    quotes: ['error', 'single'],
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
     'import/resolver': {
