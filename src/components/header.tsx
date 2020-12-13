@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { Icon } from 'components/icon'
-import { GITHUB, LINKEDIN } from 'constants/social'
+import { GITHUB, LINKEDIN, GMAIL } from 'constants/social'
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   return (
     <div className="w-full mb-4 text-black lg:mb-8 dark:text-white">
-      <div
-        x-data="{ open: true }"
-        className="flex flex-col mx-auto md:items-center md:justify-between md:flex-row"
-      >
+      <div className="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
         <div className="flex flex-row items-center justify-between p-4">
           <a
             href="/"
@@ -20,7 +17,7 @@ const Header = () => {
             </h1>
           </a>
           <button
-            className="rounded-lg md:hidden focus:outline-none focus:shadow-outline m-"
+            className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
             onClick={() => setIsNavOpen(!isNavOpen)}
           >
             <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
@@ -46,6 +43,7 @@ const Header = () => {
         >
           <Icon {...LINKEDIN} />
           <Icon {...GITHUB} />
+          <Icon {...GMAIL} />
         </nav>
       </div>
     </div>
