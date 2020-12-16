@@ -30,9 +30,10 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
     'react/react-in-jsx-scope': 'off',
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'space-before-function-paren': 'off',
+    quotes: ['error', 'single']
   },
   settings: {
     'import/resolver': {

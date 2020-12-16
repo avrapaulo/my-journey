@@ -8,13 +8,8 @@ const Header = () => {
     <div className="w-full mb-4 text-black lg:mb-8 dark:text-white">
       <div className="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
         <div className="flex flex-row items-center justify-between p-4">
-          <a
-            href="/"
-            className="text-lg font-semibold rounded-lg tracking-widestuppercase focus:outline-none focus:shadow-outline"
-          >
-            <h1 className="text-2xl font-bold tracking-tighter text-gray-500 uppercase dark:text-white md:text-sm lg:text-3xl">
-              Paulo Avramenko
-            </h1>
+          <a href="/">
+            <img style={{ maxWidth: '100px' }} src="sticker.png" alt="" />
           </a>
           <button
             className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"

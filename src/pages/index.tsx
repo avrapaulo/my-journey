@@ -12,9 +12,9 @@ const HomePage = () => (
         </div>
         <div className="row-span-2 lg:col-span-5 col-span-full">
           <div className="flex flex-wrap h-full p-8 xl:py-5 xl:px-8">
-            <h1 className="w-full m-auto text-left text-5xl font-semibold">
-              Hey there, I&rsquo;m Paulo Avramenko software developer, focused primarily on the
-              JavaScript.
+            <h1 className="w-full m-auto text-left text-5xl font-medium">
+              Hey there, I&rsquo;m <span className="font-bold">Paulo Avramenko</span> software
+              developer, focused primarily on the JavaScript.
             </h1>
           </div>
         </div>
@@ -27,6 +27,11 @@ const HomePage = () => (
               developments that are coming out of the tech ecosystem. I believe in a combination of
               humbleness, passion, dedication, hard work, and fun for a successful path.
             </div>
+          </div>
+        </div>
+        <div className="row-span-2 lg:col-span-7 col-span-full">
+          <div className="flex flex-wrap h-full p-8 bg-gray-100 shadow-xl rounded-xl dark:bg-gray-900 xl:py-5 xl:px-10 ">
+            <div className="w-full py-2 text-left xl:py-6 text-lg m-auto"></div>
           </div>
         </div>
       </div>
