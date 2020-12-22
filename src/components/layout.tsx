@@ -5,15 +5,13 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => (
-  <body className="text-black">
-    <section>
-      <div className="container px-5 mx-auto 2xl:px-0 flex flex-col h-screen">
-        <Header />
-        <div className="flex-grow">{children}</div>
-        <Footer />
-      </div>
-    </section>
-  </body>
+  <section>
+    <div className="container px-5 mx-auto 2xl:px-0 flex flex-col h-screen">
+      <Header />
+      <div className="flex-grow">{children}</div>
+      <Footer />
+    </div>
+  </section>
 )
 
 export { Layout }
