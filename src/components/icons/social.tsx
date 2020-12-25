@@ -1,6 +1,6 @@
-import { ISocial } from 'models/social'
+import { IIcon } from 'models/social'
 
-const Icon = ({ title, path, link }: ISocial) => (
+const SocialIcon = ({ title, path, link }: IIcon) => (
   <div className="my-1 md:my-0 mx-3">
     <a href={link}>
       <svg
@@ -16,4 +16,4 @@ const Icon = ({ title, path, link }: ISocial) => (
   </div>
 )
 
-export { Icon }
+export { SocialIcon }

@@ -1,4 +1,4 @@
-export interface ISocial {
+export interface IIcon {
   title: string
   path: string
   link: string
