@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { ToggleDarkMode } from 'components/toggle-dark-mode'
 import { SocialIcon } from 'components/icons/social'
 import { GITHUB, LINKEDIN, GMAIL } from 'constants/social'
@@ -10,9 +12,11 @@ const Header = () => {
     <div className="w-full mb-4 text-black lg:mb-8 dark:text-white">
       <div className="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
         <div className="flex flex-row items-center justify-between p-4">
-          <a href="/">
-            <img style={{ maxWidth: '100px' }} src="sticker.png" alt="" />
-          </a>
+          <Link href="/">
+            <a>
+              <Image src="/sticker.png" alt="Logo sticker" width={100} height={100} />
+            </a>
+          </Link>
           <button
             className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
             onClick={() => setIsNavOpen(!isNavOpen)}

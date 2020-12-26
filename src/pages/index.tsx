@@ -1,11 +1,13 @@
+import Image from 'next/image'
 import { SkillIcon } from 'components/icons/skill'
 import { SKILL_LIST } from 'constants/skill'
+
 const HomePage = () => (
   <div className="flex-1 mx-auto">
-    <div className="grid gap-4 lg:gap-x-10 lg:gap-y-24 grid-cols-1 lg:grid-cols-12">
+    <div className="grid gap-4 lg:gap-x-10 lg:gap-y-28 grid-cols-1 lg:grid-cols-12">
       <div className="row-span-1 col-span-full lg:col-span-8">
         <div className="flex justify-center h-full">
-          <h1 className="font-medium m-auto text-5xl">
+          <h1 className="text-center font-medium m-auto text-5xl">
             Hey there, I&rsquo;m <span className="font-bold">Paulo Avramenko</span> software
             developer, focused primarily on the JavaScript.
           </h1>
@@ -13,7 +15,7 @@ const HomePage = () => (
       </div>
       <div className="row-span-1 row-start-1 lg:row-start-auto col-span-full lg:col-span-4">
         <div className="flex flex-wrap justify-center xl:py-5">
-          <img style={{ maxWidth: '400px' }} src="me.png" alt="" />
+          <Image src="/me.png" alt="Paulo Avramenko" width={420} height={450} />
         </div>
       </div>
       <div className="row-span-1 col-span-full lg:col-span-3">
