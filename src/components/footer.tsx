@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="pt-8 pb-6">
+  <footer className="pt-10 pb-6">
     <div className="container px-4">
       <div className="flex flex-wrap">
         <div className="px-4 mx-auto text-center">

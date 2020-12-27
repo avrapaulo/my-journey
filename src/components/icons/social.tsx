@@ -6,7 +6,7 @@ const SocialIcon = ({ title, path, link }: IIcon) => (
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className="hover:text-gray-500 transform hover:scale-125 duration-300 ease-in-out w-9 h-9"
+        className="hover:text-gray-400 transform hover:scale-125 duration-300 ease-in-out w-9 h-9"
         fill="currentColor"
       >
         <title>{title}</title>

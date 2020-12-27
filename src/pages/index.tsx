@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Experience } from 'components/experience'
 import { SkillIcon } from 'components/icons/skill'
 import { SKILL_LIST } from 'constants/skill'
 
@@ -20,7 +21,7 @@ const HomePage = () => (
       </div>
       <div className="row-span-1 col-span-full lg:col-span-3">
         <div className="flex flex-wrap lg:grid lg:grid-cols-2 lg:justify-items-center">
-          <div className="mt-10 lg:mt-0 mb-5 lg:mb-5 w-full text-center lg:col-span-2 text-4xl">
+          <div className="mt-10 lg:mt-0 mb-5 lg:mb-5 w-full text-center lg:col-span-2 text-4xl font-bold">
             Skills
           </div>
           {SKILL_LIST.map(({ path, title, link }, index) => (
@@ -30,16 +31,16 @@ const HomePage = () => (
           ))}
         </div>
       </div>
-      <div className="row-span-1 col-span-full lg:col-span-9">
-        <div className="col-span-2 text-4xl mb-5">About Me</div>
-        <div className="text-left text-lg dark:text-gray-400 text-gray-600">
+      <div className="row-span-1 col-span-full lg:col-span-9 flex flex-col">
+        <div className="col-span-2 text-4xl mb-5 font-bold">About Me</div>
+        <div className="text-lg dark:text-gray-400 text-gray-600">
           I’ve been developing and working since 2016. I am very proud of my career paths, though I
           believe the best is yet to come. Raising my standards for new challenges, I aspire to grow
           as a developer continuously learning more about latest technologies and developments that
           are coming out of the tech ecosystem. I believe in a combination of humbleness, passion,
           dedication, hard work, and fun for a successful path.
         </div>
-        <div className="col-span-2 text-4xl mt-10 mb-5">Experience</div>
+        <Experience />
       </div>
     </div>
   </div>
