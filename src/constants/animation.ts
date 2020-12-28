@@ -3,6 +3,7 @@ export const logos = {
   visible: {
     scale: 1,
     opacity: 1,
+    color: 'unset',
     transition: { duration: 1 }
   }
 }

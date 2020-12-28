@@ -14,10 +14,11 @@ const SkillsSideBar = () => (
       Skills
     </motion.div>
 
-    {SKILL_LIST.map(({ path, title, link }, index) => (
+    {SKILL_LIST.map(({ path, title, link, color }, index) => (
       <motion.div
         initial="hidden"
         animate="visible"
+        whileHover={{ color, scale: 1.1 }}
         variants={logos}
         key={index}
         className={`lg:col-span-${(index + 1) % 3 ? '1' : '2'} m-5 lg:m-2`}
