@@ -1,9 +1,41 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToggleDarkMode } from 'components/toggle-dark-mode'
 import { SocialIcon } from 'components/icons/social'
 import { GITHUB, LINKEDIN, GMAIL } from 'constants/social'
+
+const logoVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const iconVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+}
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -11,7 +43,12 @@ const Header = () => {
   return (
     <div className="w-full mb-4 text-black lg:mb-8 dark:text-white">
       <div className="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
-        <div className="flex flex-row items-center justify-between p-4">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={logoVariants}
+          className="flex flex-row items-center justify-between p-4"
+        >
           <Link href="/">
             <a>
               <Image src="/sticker.png" alt="Logo sticker" width={100} height={100} />
@@ -36,17 +73,28 @@ const Header = () => {
               ></path>
             </svg>
           </button>
-        </div>
-        <nav
+        </motion.div>
+        <motion.nav
+          initial="hidden"
+          animate="visible"
+          variants={container}
           className={`${
             !isNavOpen ? 'hidden' : ''
           } flex-col flex-grow pb-4 m-auto md:pb-0 md:flex md:justify-end md:flex-row`}
         >
-          <SocialIcon {...LINKEDIN} />
-          <SocialIcon {...GITHUB} />
-          <SocialIcon {...GMAIL} />
-          <ToggleDarkMode />
-        </nav>
+          <motion.div variants={iconVariants}>
+            <SocialIcon {...LINKEDIN} />
+          </motion.div>
+          <motion.div variants={iconVariants}>
+            <SocialIcon {...GITHUB} />
+          </motion.div>
+          <motion.div variants={iconVariants}>
+            <SocialIcon {...GMAIL} />
+          </motion.div>
+          <motion.div variants={iconVariants}>
+            <ToggleDarkMode />
+          </motion.div>
+        </motion.nav>
       </div>
     </div>
   )
