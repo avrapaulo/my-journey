@@ -59,7 +59,7 @@ const Experience = () => {
         ))}
       </motion.div>
       <motion.a
-        className="flex justify-center mt-5 lg:mt-auto font-medium text-2xl"
+        className="flex justify-center mt-5 lg:my-auto font-medium text-2xl"
         initial="hidden"
         animate="visible"
         variants={title}
