@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { Experience } from 'components/experience'
 import { SkillsSideBar } from 'components/skills-side-bar'
 import { homeImage, homeTitle, text, title } from 'constants/animation'
+import { Card } from 'components/card'
+import { portfolio } from 'constants/projects'
 
 const HomePage = () => (
   <div className="flex-1 mx-auto">
@@ -30,6 +32,13 @@ const HomePage = () => (
           <Image src="/me.png" alt="Paulo Avramenko" width={420} height={450} />
         </div>
       </motion.div>
+      <div className="row-span-1 col-span-full lg:col-span-4">
+        <Card project={portfolio} />
+      </div>
+      <div className="row-span-1 col-span-full lg:col-span-4">
+        <Card isEmpty={true} delay={0.3} />
+      </div>
+      <div className="row-span-1 col-span-full lg:col-span-4"></div>
       <div className="row-span-1 col-span-full lg:col-span-3">
         <div className="flex flex-wrap lg:grid lg:grid-cols-2 lg:justify-items-center">
           <SkillsSideBar />

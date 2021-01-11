@@ -10,6 +10,11 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    extend: {
+      backgroundOpacity: ['dark'],
+      borderOpacity: ['dark'],
+    }
+  },
   plugins: []
 }
