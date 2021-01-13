@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Project } from 'models/project'
+import styled from './card.module.css'
 
 interface Props {
   isEmpty?: boolean
@@ -25,8 +26,7 @@ const Card = ({ isEmpty, delay = 0, project }: Props) => (
     className="relative flex justify-center items-center w-full h-full"
   >
     <div
-      className="w-full h-full p-4 z-10 bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10 rounded-3xl border border-black dark:border-white border-solid border-opacity-20 dark:border-opacity-20"
-      style={{ backdropFilter: 'blur(15px)' }}
+      className={`${styled.card} w-full h-full p-4 z-10 bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10 rounded-3xl border border-black dark:border-white border-solid border-opacity-20 dark:border-opacity-20`}
     >
       {!isEmpty ? (
         <>
